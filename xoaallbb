@@ -1,0 +1,17 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var uidcanxoa = "uidfb";
+var url = "https://www.facebook.com/api/graphql/";
+var data = "av="+userId+"&__user="+userId+"&__a=1&__dyn=7AzHJ16UW5Eb8ng5K8G6EjBWobVo66u2i5U4e2C17xt3odEnz8K361twYwJyEiwsobo6u3y4o2Gwfi0LVEtwMw65xO2OU7m2210wEwgolzUO0-E4a3a4oaEnxO0Bo7O2l2Utwwwi831wiEjwZx-3m1mzXw8W58jwGzE8FU5e7oqBwJK2W5olwUwgojUlDw-wUwxwjFovUy2a0RHxWm2Sq2-azo2NwwwOg2cwMwhF8-4UdUcojxK2B0oobo8oC1hxG&__csr=gbkr5uSAOgJd4Rb5iMz6lezjkBQAzveziZkxBjKRiD8DqiKgJ4ZqRldalKchuV5HjDVnilXQGqZDzA-HBjBhV9fn-qjrBCiCpepVbABG-GhbhokJ2CpeuvGc_VrG5oB4xt6x6fxam4oCWyVdrDyEy7EytAzrCgnCz-KdCz6qiqEF2p4m4Wxa8G542i69U-u22h7xqq7Vk6C2SDyXJ3UyfLxeuU28xWu48gxy8xOeG3iu68oy9k8UrwmE9EowFK5E-3Gbx6EcawLy8fS7E6m3y267EoxG5ooz85u04ZodoG1EzE0rRw1L-1Uw5kw09MG03bu0iGi3W070U1Zonw3tIM3lw3UE0Pp0e1wUDw5Xw0wZyroBi075wmU3gp9A9w36p61EwhU0Ca5UO8w1EKqA0e1w2Oo7txm16wjkipp1g0yWu54mppVE2ww50g1R9o1cU0U20tW2C2y1ng3awTw&__req=1q&__hs=19443.HYP%3Acomet_pkg.2.1..2.1&dpr=1&__ccg=MODERATE&__rev=1007183461&__s=zei2i4%3Amb2dos%3Afxrd68&__hsi=7215163944320770420&__comet_req=15&fb_dtsg="+fbdtsg+"&jazoest=25517&lsd=efIzPSrkZZWc_CjkoR9ysQ&__aaid=586182393306382&__spin_r="+spinR+"&__spin_b=trunk&__spin_t="+spinT+"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=FriendingCometUnfriendMutation&variables=%7B%22input%22%3A%7B%22source%22%3A%22bd_profile_button%22%2C%22unfriended_user_id%22%3A%22"+uidcanxoa+"%22%2C%22actor_id%22%3A%22"+userId+"%22%2C%22client_mutation_id%22%3A%221%22%7D%2C%22scale%22%3A1%7D&server_timestamps=true&doc_id=8752443744796374";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

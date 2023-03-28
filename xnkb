@@ -1,0 +1,18 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var email = "hotmail";
+var uidbanbe = "thayuidxnkb";
+var url = "https://www.facebook.com/api/graphql/";
+var data = "av="+userId+"&__user="+userId+"&__a=1&__dyn=7AzHJ16UW5Eb8ng5K8G6EjBWobVo66u2i5U4e2C17xt3odEnz8K2aewnof8boG4E762S1DwUx60GE3Qwb-q7oc81xoswIK1Rwwwg8a8465o-cwfG12wOx62G5Usw9m1YwBgK7o884y0Mo4G4UfovwRwlE-U2exi4UaEW2au1jxS6FobrwKxm5oe8464-5pUfEe88o4Wm7-8wywdqUuBwJCwLyES0Io88cA0z8c84qifxe3u364UrwFg662S269wkoqw&__csr=gtgV7TltiPTdbON4I88n2DaD4mySzi8hRYADiEY_EKJVJ9oCiHsGAhaTniHi8KUBbHWhUCZkCJ7LhUx6GpvCDx2rx2DhKbiHgyQQrKryF-AKLmeF2LAhoDGpkvKicAyUmXCCyUXwQzEHAzGJxHKECbBADgO6Xm4EWiiqcykKWwEHVpEhLgjyoydDxmdw_xe8z49BypEqBBgOu2jCxKeo5iEy3G1dx2Euh8pxCh3EnwEK2yiq48O685e7pofGgowHzUsDxu1dxbwNxq1fxG2q3q6aK2i1txC48pw1AS1qg3qw0x3w1aCE08G83ow0u8U0cKU1o98096Hw4Sw5ce0hW0S80DW05CS4HwkUpxq0PE14A07V8cl83yEZ1a0sBACgC3C0rYw1yU1qEngdE3QwJwkE4G06W8a-E0CO0asUuw4xQVBB4G2e2idg1K8nguP1u06fE761ew5Pw2ro4Cq0B8&__req=w&__hs=19444.HYP%3Acomet_pkg.2.1..2.1&dpr=1&__ccg=MODERATE&__rev=1007193379&__s=scotlg%3Ae0v2i4%3Aje9umv&__hsi=7215560060687417677&__comet_req=15&fb_dtsg="+fbdtsg+"&jazoest=25753&lsd=ICcbSkhM69Vo_s7smAeDln&__aaid=1247681842728792&__spin_r=1007193379&__spin_b=trunk&__spin_t=1680003493&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=FriendingCometFriendRequestConfirmMutation&variables=%7B%22input%22%3A%7B%22attribution_id_v2%22%3A%22ProfileCometTimelineListViewRoot.react%2Ccomet.profile.timeline.list%2Cvia_cold_start%2C1680003492004%2C745029%2C190055527696468%2C%22%2C%22friend_requester_id%22%3A%22"%22%2C%22source%22%3A%22profile_inline%22%2C%22actor_id%22%3A%22100006898751991%22%2C%22client_mutation_id%22%3A%221%22%7D%2C%22scale%22%3A1%2C%22refresh_num%22%3A0%2C%22__relay_internal__pv__StoriesRingrelayprovider%22%3Afalse%7D&server_timestamps=true&doc_id=6368093549870401";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

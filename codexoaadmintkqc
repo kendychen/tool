@@ -1,0 +1,19 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var uidcanxoa = "uidbbcanxoa";
+var uidtkqccanxoa = "uidtkqccanxoaok";
+
+var url = "https://adsmanager.facebook.com/ads/manage/settings/remove_user/?user_id="+uidcanxoa+"&act="+uidtkqccanxoa+"&is_new_account_settings=1";
+var data = "jazoest=25555&fb_dtsg="+fbdtsg+"&__user="+userId+"&__a=1&__dyn=7xeUmxa2C5rgydwCwRyu2abheCEnxim2q12xCagjGqErxqqax2366UjyXgC3eF98Sm4EuGfyUeEjG4Erzobo-4Jxe1kx21FxG9y8Gdz8hwgocEaEcEixWq4o8A2m5E89EeUryFEdUmKFpobQUTwJHiG9zQE8RVodoKUryonwu8sxep3bBwyxm3G4UhwXzoqwgolUScyo725UtwrUO12Kmu7EK3i2a3Fe6rwRwFDwFwBgK7kbAzE8U98doK78-3K5E5WUrorx2aK2a4p8y58OU8U-UG2e1dx-q4VEhwwwSwpp8bU-dwKwHxa1oxqbxu3ydDxG3WcwMzUkGum2ym2WE4e8zUK3y4oKqbDyoOEbVEHyU8U3yDwbm1bwzwxwhV8aE4eueCK2q1pwjoeUW&__csr=&__req=v&__hs=19445.BP%3Aads_campaign_manager_pkg.2.0..0.0&dpr=1&__ccg=UNKNOWN&__rev=1007202889&__s=fn9zuz%3Arrvev6%3Au7qksg&__hsi=7215924042578356035&__comet_req=0&lsd=xUebHKv53AvnhAju5wcCqV&__aaid=170746092456391&__spin_r=1007202889&__spin_b=trunk&__spin_t=1680088239&__jssesw=1";
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

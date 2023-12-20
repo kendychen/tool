@@ -1,0 +1,17 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var tkqc = "uidtkqc";
+var url = "https://adsmanager.facebook.com/ads/manager/post_all_adaccount_notifications/?ad_account_id="+tkqc+"&is_adaccount_notifications_enabled=false&_flowletID=5362";
+var data = "__usid=6-Ts5zj71s8l4ag%3APs5zj719uzr5t%3A0-As5zj71ercykl-RV%3D6%3AF%3D&__user="+userId+"&__a=1&__req=w&__hs=19711.BP%3Aads_campaign_manager_pkg.2.0..0.0&dpr=1&__ccg=EXCELLENT&__rev="+spinR+"&__s=h9xt5o%3A94gzpm%3Aw0daeb&__hsi="+hsi+"&__dyn=7xeUmxa2C5rgydwCxpxO9UqDBBBAqxu59o9E4a2i5aCGq58mCyEgx2226UjACzEdF98SmcBxWE-1qG4EOezobo-5FoS3a2648V2EK12xqUC8yEScx6bwRwOwGwOxa7FEd42m5Edobo9FE4WqmmU-6QUTgb9qG4pQE8RpodoKUV2U8oK1IxN1ap3bBwyylhUeEjx63KdxG11xny-cwuEnxK1Nz84a9DxW48W222a3Fe6rwRwFDwFwBgakbAzE8UqyodoJ1KfwXxq2Sq2S6S6UgyHx24poKi8wxK2efKawzwjovCxeq4o88dElwjV8rxefzobEaUiwm8Wubwk8Su6EfEO33zokGum2iVobGwgUyfyA4Ekx24oKqbDyoOFE8FpEHyWwwwi8mwuFVU2RwhoQwox3wlFbwCwFgoDzFHwCwNU9o4S7ErhEsxx7KA36q2au3Gez8aEky8&__csr=&fb_dtsg="+fbdtsg+"&jazoest="+jazoest+"&lsd=WLeXt6D7LGghX_pdJOE4HC&__aaid=1560416644287100&__spin_r="+spinR+"&__spin_b=trunk&__spin_t=1" + spinT;
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(e => e.text()).then(e => {})

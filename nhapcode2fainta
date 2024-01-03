@@ -1,0 +1,23 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var code2fa = "macode2fa";
+var uidfb = "ganuidtkfb";
+var url = "https://accountscenter.instagram.com/api/graphql/";
+var data = "av="+userId+"&__user=0&__a=1&__req=57&__hs=19725.HYP%3Aaccounts_center_pkg.2.1..0.1&dpr=1&__ccg=MODERATE&__rev=1010641590&__s=76253y%3A34f7m7%3A6uc7eu&__hsi=7319785478686154075&__dyn=7xeUmwlE7ibwKBAo2vwAxu13w8CewSwMwNw9G2S0im3y4o0B-q1ew65wio7C0yE7i0n24o5-0Bo7O2l0Fwqo31w9O7U2cxe0EUjwGzE2swwwNwKwHw8Xwn82Lx-0iS2S3qazo7u0zEiwaG1LwTwNwbO1pwr86C1nw&__csr=gWAB6PvqljEMBlFilRkyIPEABNuJPZkKQB_9nuBWV2hdN8DlHHluJpfSCmiqQh9VptZV2SlnhtZfGQBmyBAApt5DqBAAjXKhbWZe8rKVk8Hy8iG9Gqmu-AqBjFrCAhFFpkEB9eC8DyeQdyER6GujQt1200iYC0a7wfu1Vp9E0w-02_51F1uq0cpxyjiCHCwJxWiGOGqGK2hGQiaQiFqiZ2EeiwYbaRIo0Bo8UQyhFoigKmmQ8wl8am2h7x6XDBUnGm9zJqBKiWGGwMDyoC4lABK4Yw1w9K8Bw4vw&__comet_req=24&fb_dtsg="+fbdtsg+"&jazoest=26617&lsd=AdRPqNyoCEqlEet4xuoEvN&__spin_r=1010641590&__spin_b=trunk&__spin_t=1704270364&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=useFXSettingsTwoFactorEnableTOTPMutation&variables=%7B%22input%22%3A%7B%22client_mutation_id%22%3A%22333a61c5-6088-48ee-965c-762096b62131%22%2C%22actor_id%22%3A%22"+userId+"%22%2C%22account_id%22%3A%22"+uidfb+"%22%2C%22account_type%22%3A%22FACEBOOK%22%2C%22verification_code%22%3A%22"+code2fa+"%22%2C%22device_id%22%3A%22device_id_fetch_ig_did%22%2C%22fdid%22%3A%22device_id_fetch_ig_did%22%7D%7D&server_timestamps=true&doc_id=7032881846733167";
+console.log("Data being sent:", data);
+
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(response => response.text()).then(responseText => {
+    // Show the response data in a dialog box
+    alert("Response Data:\n" + responseText);
+});

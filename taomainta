@@ -21,5 +21,7 @@ fetch(url, {
     // Show the response data in a dialog box
     alert("Response Data:\n" + responseText);
 	console.log(responseText);
+var result = responseText;
+                    callback(result);
 
 });

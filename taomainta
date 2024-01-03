@@ -1,0 +1,25 @@
+var spinR = require(["SiteData"]).__spin_r;
+var spinB = require(["SiteData"]).__spin_b;
+var spinT = require(["SiteData"]).__spin_t;
+var jazoest = require(["SprinkleConfig"]).jazoest;
+var fbdtsg = require(["DTSGInitData"]).token;
+var userId = require(["CurrentUserInitialData"]).USER_ID;
+var hsi = require(["SiteData"]).hsi;
+var email = "hotmail";
+var uidfb = "ganuidtkfb";
+var url = "https://accountscenter.instagram.com/api/graphql/";
+var data = "av="+userId+"&__user=0&__a=1&__req=1a&__hs=19725.HYP%3Aaccounts_center_pkg.2.1..0.1&dpr=1&__ccg=MODERATE&__rev=1010641590&__s=zkduy5%3A34f7m7%3A6uc7eu&__hsi=7319785478686154075&__dyn=7xeUmwlE7ibwKBAo2vwAxu13w8CewSwMwNw9G2S0im3y4o0B-q1ew65wio7C0yE7i0n24o5-0Bo7O2l0Fwqo31w9O7U2cxe0EUjwGzE2swwwNwKwHw8Xwn82Lx-0iS2S3qazo7u0zEiwaG1LwTwNwbO1pwr86C1nw&__csr=gWAB6PvqljEMBlFilRkyIPEABNuJPJkKQB_9niFuKgAjsi9RqWRnHmjZFBACJ4iumnvugJBlQnvjWJ9lEFp96nhpSFp94-XAi-Ljy6XKl2aUy4GyqCBDLF6FkWmVF4qqmla9ijFy9UzJ3oGdhGDAZ7ggw04L9w2xU3Twumiq08fw0LNgqgnCw36ooAQFGVEbouAGIGCGHwAqJ4yJ4GmALgG3AEf2OJr609m2ed8Aqm4AbBBJ285i2BwAhUhKVVu5WByoXmFrAKGGEc9UC9x5p9rxf80o2ry9o17U&__comet_req=24&fb_dtsg="+fbdtsg+"&jazoest="+jazoest+"&lsd=AdRPqNyoCEqlEet4xuoEvN&__spin_r="+spinR+"&__spin_b=trunk&__spin_t="+spinT+"&fb_api_caller_class=RelayModern&fb_api_req_friendly_name=useFXSettingsTwoFactorGenerateTOTPKeyMutation&variables=%7B%22input%22%3A%7B%22client_mutation_id%22%3A%22%22%2C%22actor_id%22%3A%22%22%2C%22account_id%22%3A%22"+uidfb+"%22%2C%22account_type%22%3A%22FACEBOOK%22%2C%22device_id%22%3A%22device_id_fetch_ig_did%22%2C%22fdid%22%3A%22device_id_fetch_ig_did%22%7D%7D&server_timestamps=true&doc_id=6282672078501565";// Log data to console
+//console.log("Data being sent:", data);
+
+fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+}).then(response => response.text()).then(responseText => {
+    // Show the response data in a dialog box
+    alert("Response Data:\n" + responseText);
+	console.log(responseText);
+
+});
